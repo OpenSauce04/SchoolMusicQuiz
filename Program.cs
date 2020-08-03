@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SchoolCodingThingIDKwhatItsCalled
 {
@@ -10,7 +6,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 	{
 		static void Main(string[] args)
 		{
-			Login.Prompt();
+			if (Login.Prompt()) { Console.WriteLine("Works :D"); }
 			System.Threading.Thread.Sleep(2000);
 		}
 	}
