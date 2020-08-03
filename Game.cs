@@ -9,18 +9,20 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		public static Random random = new Random();
 		public static int SongId;
 		public static int lives = 3;
+		public static int score = 0;
 		public static void Run()
 		{
 			while (lives != 0)
 			{
 				SongId = random.Next(0, 188);
 				Console.Clear();
-				Console.WriteLine("Lives: "+lives+"\n");
+				Console.WriteLine("Lives: "+lives+" Score: "+score+"\n");
 				Console.WriteLine(Songs[(SongId * 3) + 1]); //Display artist
 				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2])); //Display obfuscated song name
 				if (Console.ReadLine() == Songs[(SongId * 3) + 2])
 				{
 					Console.WriteLine("Correct!");
+					score += 1;
 				}
 				else
 				{
@@ -29,6 +31,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					if (lives == 0)
 					{
 						Console.WriteLine("Game Over!");
+						Console.WriteLine("Final score: " + score);
 					}
 					else
 					{
