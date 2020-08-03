@@ -19,7 +19,6 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Thread.Sleep(500);
 			Console.Clear();
 			Game.Run();
-			Thread.Sleep(100000);
 		}
 	}
 }
