@@ -11,6 +11,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		static void Main(string[] args)
 		{
 			Login.Prompt();
+			System.Threading.Thread.Sleep(2000);
 		}
 	}
 }
