@@ -16,7 +16,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					LoggedIn = true; // Disable login loop, start main program.
 				}
 			}
-			Thread.Sleep(2000);
+			Thread.Sleep(500);
 			Console.Clear();
 			Game.Run();
 			Thread.Sleep(100000);

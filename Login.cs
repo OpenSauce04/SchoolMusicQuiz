@@ -19,7 +19,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				return true;                                                              // If it does, return true
 			}
 			Console.WriteLine("Login failed.");
-			Thread.Sleep(1500);
+			Thread.Sleep(500);
 			Console.Clear();
 			return false;                                                                 // ... and if not, return false.
 		}
