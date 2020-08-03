@@ -17,6 +17,9 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				}
 			}
 			Thread.Sleep(2000);
+			Console.Clear();
+			Game.Run();
+			Thread.Sleep(2000);
 		}
 	}
 }

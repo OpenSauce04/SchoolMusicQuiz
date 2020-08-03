@@ -16,12 +16,12 @@ namespace SchoolCodingThingIDKwhatItsCalled
 																						  // and if it does checks to see if the user's password hash matches
 																						  // with the user's input.
 			{
-				return true;															  // If it does, return true
+				return true;                                                              // If it does, return true
 			}
 			Console.WriteLine("Login failed.");
 			Thread.Sleep(1500);
 			Console.Clear();
-			return false;																  // ... and if not, return false.
+			return false;                                                                 // ... and if not, return false.
 		}
 	}
 }
