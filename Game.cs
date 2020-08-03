@@ -13,6 +13,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			SongId = random.Next(0, 188);
 			Console.Clear();
 			Console.WriteLine(Songs[(SongId * 3) + 1]);
+			Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2]));
 		}
 	}
 }

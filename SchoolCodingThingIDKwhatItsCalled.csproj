@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlankText.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="SHA256.cs" />
     <Compile Include="Login.cs" />
