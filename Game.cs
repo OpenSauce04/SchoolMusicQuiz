@@ -15,9 +15,9 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			{
 				SongId = random.Next(0, 188);
 				Console.Clear();
-				Console.WriteLine(lives);
-				Console.WriteLine(Songs[(SongId * 3) + 1]);
-				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2]));
+				Console.WriteLine("Lives: "+lives+"\n");
+				Console.WriteLine(Songs[(SongId * 3) + 1]); //Display artist
+				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2])); //Display obfuscated song name
 				if (Console.ReadLine() == Songs[(SongId * 3) + 2])
 				{
 					Console.WriteLine("Correct!");
