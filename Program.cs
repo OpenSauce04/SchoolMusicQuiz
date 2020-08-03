@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace SchoolCodingThingIDKwhatItsCalled
 {
@@ -6,8 +7,16 @@ namespace SchoolCodingThingIDKwhatItsCalled
 	{
 		static void Main(string[] args)
 		{
-			if (Login.Prompt()) { Console.WriteLine("Works :D"); }
-			System.Threading.Thread.Sleep(2000);
+			bool LoggedIn = false;
+			while (LoggedIn == false) // Loop this code until logged in
+			{
+				if (Login.Prompt())
+				{
+					Console.WriteLine("Login successful.");
+					LoggedIn = true; // Disable login loop, start main program.
+				}
+			}
+			Thread.Sleep(2000);
 		}
 	}
 }

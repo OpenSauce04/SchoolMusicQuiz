@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 
 namespace SchoolCodingThingIDKwhatItsCalled
 {
@@ -17,6 +18,9 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			{
 				return true;															  // If it does, return true
 			}
+			Console.WriteLine("Login failed.");
+			Thread.Sleep(1500);
+			Console.Clear();
 			return false;																  // ... and if not, return false.
 		}
 	}
