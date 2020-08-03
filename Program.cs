@@ -10,6 +10,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 	{
 		static void Main(string[] args)
 		{
+			Login.Prompt();
 		}
 	}
 }
