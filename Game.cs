@@ -34,9 +34,9 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					{
 						Console.WriteLine(lives + " lives left.");
 					}
-					Console.WriteLine("Press any key to continue...");
-					Console.ReadKey();
 				}
+				Console.WriteLine("Press any key to continue...");
+				Console.ReadKey();
 			}
 		}
 	}
