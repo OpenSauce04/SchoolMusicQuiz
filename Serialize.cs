@@ -1,6 +1,6 @@
 ﻿using System;
-using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 namespace SchoolCodingThingIDKwhatItsCalled
 {
 	class Serialize

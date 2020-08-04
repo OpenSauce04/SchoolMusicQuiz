@@ -23,7 +23,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				Console.Clear();
 				Console.WriteLine("Chances: " + chances + " Score: " + score + "\n");
 				Console.WriteLine(Songs[(SongId * 3) + 1]); //Display artist
-				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2])); //Display obfuscated song name
+				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name
+				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2])[1]);
 				if (Console.ReadLine() == Songs[(SongId * 3) + 2])
 				{
 					Console.WriteLine("Correct!");

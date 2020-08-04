@@ -7,6 +7,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 	{
 		static void Main(string[] args)
 		{
+			Console.OutputEncoding = System.Text.Encoding.UTF8;
 			bool LoggedIn = false;
 			while (LoggedIn == false) // Loop this code until logged in
 			{
