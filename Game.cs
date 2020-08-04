@@ -19,7 +19,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		{
 			while (lives != 0)
 			{
-				SongId = random.Next(0, 188);
+				SongId = random.Next(0, 187);
 				Console.Clear();
 				Console.WriteLine("Lives: " + lives + " Score: " + score + "\n");
 				Console.WriteLine(Songs[(SongId * 3) + 1]); //Display artist
