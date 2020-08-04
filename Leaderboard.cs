@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Security.Cryptography;
+
 namespace SchoolCodingThingIDKwhatItsCalled
 {
 	[Serializable]
@@ -41,6 +43,10 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		public static void Write()
 		{
 			File.WriteAllBytes("Leaderboard.bin", Serialize.ObjectToByteArray(Scores));
+		}
+		public static Byte[] Read(string path)
+		{
+			return File.ReadAllBytes(path);
 		}
 	}
 }

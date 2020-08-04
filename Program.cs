@@ -19,7 +19,12 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Thread.Sleep(500);
 			while (true) {
 				Console.Clear();
-				Game.Wipe();
+				try
+				{
+					Leaderboard.Scores = (Score[])Serialize.ByteArrayToObject(Leaderboard.Read("Leaderboard.bin"));
+				}
+				catch {} // If there is no Leaderboard.bin file, keep running anyway.
+				Game.Wipe(); // Clear game variables
 				Game.Run();
 			}
 		}
