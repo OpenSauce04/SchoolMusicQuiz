@@ -14,8 +14,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			string pass = SHA256.calc(Console.ReadLine());
 			if (File.Exists("userdb/" + user)
 				&& File.ReadAllText("userdb/" + user) == pass) // Checks to see if the user's entry in the user database exists,
-																						  // and if it does checks to see if the user's password hash matches
-																						  // with the user's input.
+															   // and if it does checks to see if the user's password hash matches
+															   // with the user's input.
 			{
 				return true;                                                              // If it does, return true
 			}
