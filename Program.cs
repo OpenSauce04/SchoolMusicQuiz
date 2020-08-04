@@ -17,9 +17,11 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				}
 			}
 			Thread.Sleep(500);
-			Console.Clear();
-			Game.Run();
-			Console.ReadKey();
+			while (true) {
+				Console.Clear();
+				Game.Wipe();
+				Game.Run();
+			}
 		}
 	}
 }

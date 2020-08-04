@@ -10,6 +10,11 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		public static int SongId;
 		public static int lives = 3;
 		public static int score = 0;
+		public static void Wipe()
+		{
+			lives = 3;
+			score = 0;
+		}
 		public static void Run()
 		{
 			while (lives != 0)
@@ -45,6 +50,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Console.Write("Please enter your name: ");
 			Leaderboard.Add(Console.ReadLine(), score);
 			Leaderboard.Display();
+			Console.WriteLine("\nPress any key to restart");
+			Console.ReadKey();
 		}
 	}
 }
