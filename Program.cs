@@ -10,6 +10,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			bool LoggedIn = false;
 			while (LoggedIn == false) // Loop this code until logged in
 			{
+				Console.WriteLine("Written by Daniel Bradbury :)\n");
 				if (Login.Prompt())
 				{
 					Console.WriteLine("Login successful.");
