@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Security.Cryptography;
 
 namespace SchoolCodingThingIDKwhatItsCalled
 {
@@ -15,7 +14,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			score = iScore;
 		}
 	}
-	
+
 	class Leaderboard
 	{
 		public static Score[] Scores = new Score[1000];
@@ -36,7 +35,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			{
 				if (Scores[i] != null)
 				{
-					Console.WriteLine((i+1) + " " + Scores[i].name + ": " + Scores[i].score);
+					Console.WriteLine((i + 1) + " " + Scores[i].name + ": " + Scores[i].score);
 				}
 			}
 		}
