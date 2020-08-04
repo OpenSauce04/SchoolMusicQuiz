@@ -1,7 +1,8 @@
 ﻿using System;
-
+using System.IO;
 namespace SchoolCodingThingIDKwhatItsCalled
 {
+	[Serializable]
 	class Score
 	{
 		public string name { get; }
@@ -12,6 +13,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			score = iScore;
 		}
 	}
+	
 	class Leaderboard
 	{
 		public static Score[] Scores = new Score[1000];
@@ -35,6 +37,10 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					Console.WriteLine((i+1) + " " + Scores[i].name + ": " + Scores[i].score);
 				}
 			}
+		}
+		public static void Write()
+		{
+			File.WriteAllBytes("Leaderboard.bin", Serialize.ObjectToByteArray(Scores));
 		}
 	}
 }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlankText.cs" />
+    <Compile Include="Serialize.cs" />
     <Compile Include="Leaderboard.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="SHA256.cs" />

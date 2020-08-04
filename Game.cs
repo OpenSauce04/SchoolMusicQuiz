@@ -49,6 +49,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Console.Clear();
 			Console.Write("Please enter your name: ");
 			Leaderboard.Add(Console.ReadLine(), score);
+			Leaderboard.Write();
 			Leaderboard.Display();
 			Console.WriteLine("\nPress any key to restart");
 			Console.ReadKey();
