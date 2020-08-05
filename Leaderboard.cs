@@ -43,6 +43,30 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		{
 			File.WriteAllBytes("Leaderboard.bin", Serialize.ObjectToByteArray(Scores));
 		}
+		public static void Swap(int indexA, int indexB)
+		{
+			Score temp = Scores[indexA];
+			Scores[indexA] = Scores[indexB];
+			Scores[indexB] = temp;
+		}
+		public static void Sort()
+		{
+			bool Sorted = false;
+			while (Sorted == false) {
+				Sorted = true;
+				for (int i = 0; i <= Scores.Length - 2; i++)
+				{
+					try
+					{
+						if (Scores[i].score < Scores[i + 1].score)
+						{
+							Swap(i, i + 1);
+							Sorted = false;
+						}
+					} catch (NullReferenceException) { break; }
+				}
+			}
+		}
 		public static Byte[] Read(string path)
 		{
 			return File.ReadAllBytes(path);
