@@ -31,7 +31,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		}
 		public static void Display()
 		{
-			for (int i = 0; i <= Scores.Length - 1; i++)
+			for (int i = 0; i < 5; i++)
 			{
 				if (Scores[i] != null)
 				{

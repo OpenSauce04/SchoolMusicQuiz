@@ -53,6 +53,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Leaderboard.Add(Console.ReadLine(), score);
 			Leaderboard.Sort();
 			Leaderboard.Write();
+			Console.Clear();
+			Console.WriteLine("TOP 5 SCORES:");
 			Leaderboard.Display();
 			Console.WriteLine("\nPress any key to restart");
 			Console.ReadKey();
