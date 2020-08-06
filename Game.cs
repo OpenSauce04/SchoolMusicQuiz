@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Threading;
 
 namespace SchoolCodingThingIDKwhatItsCalled
 {
@@ -15,6 +17,33 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			chances = 2;
 			score = 0;
 		}
+		public static void ChanceWarning()
+		{
+			int pCursorLeft;
+			int pCursorTop;
+			while (true)
+			{
+				Thread.Sleep(500);
+				pCursorTop = Console.CursorTop;
+				Console.CursorTop = 1;
+				pCursorLeft = Console.CursorLeft;
+				Console.ForegroundColor = ConsoleColor.Red;
+				Decor.WriteCentered("Chances: " + chances + new String(' ', (" Score: "+score).Length));
+				Console.ForegroundColor = ConsoleColor.White;
+				Console.CursorLeft -= ("Chances: " + chances).Length - 1;
+				Console.Write(" Score: " + score);
+				Console.CursorLeft = pCursorLeft;
+				Console.CursorTop = pCursorTop;
+				Thread.Sleep(500);
+				pCursorTop = Console.CursorTop;
+				Console.CursorTop = 1;
+				pCursorLeft = Console.CursorLeft;
+				Decor.WriteCentered("Chances: " + chances + " Score: " + score);
+				Console.CursorLeft = Console.WindowWidth / 2 - Songs[(SongId * 3) + 2].Length / 2;
+				Console.CursorLeft = pCursorLeft;
+				Console.CursorTop = pCursorTop;
+			}
+		}
 		public static void Run()
 		{
 			while (chances != 0)
@@ -22,6 +51,11 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				if (chances != 1)
 				{
 					SongId = random.Next(0, 182);
+				}
+				else
+				{
+					Thread ChanceWarningThread = new Thread(ChanceWarning);
+					ChanceWarningThread.Start();
 				}
 				Console.Clear();
 				Decor.DrawBorder();

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 
 namespace SchoolCodingThingIDKwhatItsCalled
 {
@@ -21,7 +20,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		}
 		public static void WriteCentered(string input)
 		{
-			Console.CursorLeft = Console.WindowWidth/2-input.Length/2;
+			Console.CursorLeft = Console.WindowWidth / 2 - input.Length / 2;
 			Console.CursorTop += 1;
 			Console.Write(input);
 		}
