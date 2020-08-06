@@ -19,7 +19,10 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		{
 			while (chances != 0)
 			{
-				SongId = random.Next(0, 182);
+				if (chances != 1)
+				{
+					SongId = random.Next(0, 182);
+				}
 				Console.Clear();
 				Console.WriteLine("Chances: " + chances + " Score: " + score + "\n");
 				Console.WriteLine(Songs[(SongId * 3) + 1]); //Display artist
@@ -34,10 +37,10 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				else
 				{
 					chances -= 1;
-					Console.WriteLine("The correct answer was " + Songs[(SongId * 3) + 2]);
 					if (chances == 0)
 					{
 						Console.WriteLine("Game Over!");
+						Console.WriteLine("The correct answer was " + Songs[(SongId * 3) + 2]);
 						Console.WriteLine("Final score: " + score);
 					}
 					else
