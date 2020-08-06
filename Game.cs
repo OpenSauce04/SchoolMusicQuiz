@@ -25,19 +25,17 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				}
 				Console.Clear();
 				Decor.DrawBorder();
-				Decor.IndentedNL();
-				Console.Write("Chances: " + chances + " Score: " + score);
-				Decor.IndentedNL();
-				Console.Write(Songs[(SongId * 3) + 1]); //Display artist
-				Decor.IndentedNL();
-				Console.Write(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name
-				Decor.IndentedNL();
-				Console.Write(BlankText.Parse(Songs[(SongId * 3) + 2])[1]);
-				Decor.IndentedNL();
+				Console.CursorTop++;
+				Decor.WriteCentered("Chances: " + chances + " Score: " + score);
+				Console.CursorTop++;
+				Decor.WriteCentered(Songs[(SongId * 3) + 1]); //Display artist
+				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name
+				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[1]);
+				Console.CursorLeft = Console.WindowWidth / 2 - Songs[(SongId * 3) + 2].Length / 2;
+				Console.CursorTop += 1;
 				if (Console.ReadLine().ToLower() == Songs[(SongId * 3) + 2].ToLower())
 				{
-					Decor.IndentedNL();
-					Console.WriteLine("Correct!");
+					Decor.WriteCentered("Correct!");
 					score += 1;
 					chances = 2;
 				}
@@ -46,21 +44,16 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					chances -= 1;
 					if (chances == 0)
 					{
-						Decor.IndentedNL();
-						Console.Write("Game Over!");
-						Decor.IndentedNL();
-						Console.Write("The correct answer was " + Songs[(SongId * 3) + 2]);
-						Decor.IndentedNL();
-						Console.Write("Final score: " + score);
+						Decor.WriteCentered("Game Over!");
+						Decor.WriteCentered("Correct answer: " + Songs[(SongId * 3) + 2]);
+						Decor.WriteCentered("Final score: " + score);
 					}
 					else
 					{
-						Decor.IndentedNL();
-						Console.Write("1 chance left...");
+						Decor.WriteCentered("1 chance left...");
 					}
 				}
-				Decor.IndentedNL();
-				Console.Write("Press any key to continue...");
+				Decor.WriteCentered("Press any key to continue...");
 				Console.ReadKey();
 			}
 			Console.Clear();

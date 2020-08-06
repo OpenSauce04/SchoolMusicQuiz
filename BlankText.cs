@@ -19,6 +19,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				index += 1;
 			}
 			string[] output = new string[2] { string.Join(" ", outputArrayTop), string.Join(" ", outputArrayBottom) }; // Combine the generated arrays into two strings
+			output[0] = output[0].Substring(0, input.Length);
+			output[1] = output[1].Substring(0, input.Length);
 			return output;                                                                                             // ...and return that string.
 		}
 	}

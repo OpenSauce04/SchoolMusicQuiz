@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace SchoolCodingThingIDKwhatItsCalled
 {
@@ -18,10 +19,11 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Console.CursorTop = 0;
 			Console.CursorLeft = 0;
 		}
-		public static void IndentedNL()
+		public static void WriteCentered(string input)
 		{
-			Console.CursorLeft = 1;
+			Console.CursorLeft = Console.WindowWidth/2-input.Length/2;
 			Console.CursorTop += 1;
+			Console.Write(input);
 		}
 	}
 }

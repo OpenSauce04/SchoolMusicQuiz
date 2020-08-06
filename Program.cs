@@ -36,8 +36,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			}
 			// END
 			Console.WindowWidth = 50;
-			Console.WindowHeight = 15;
-			Console.BufferHeight = 15;
+			Console.WindowHeight = 16;
+			Console.BufferHeight = 16;
 			Console.BufferWidth = 50;
 			Console.OutputEncoding = System.Text.Encoding.UTF8;
 			bool LoggedIn = false;
