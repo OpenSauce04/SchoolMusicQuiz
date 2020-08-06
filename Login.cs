@@ -10,7 +10,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		{
 			Console.Write("Enter your username: ");
 			string user = SHA256.calc(Console.ReadLine()); // Take user input for username and store SHA256 hash of input
-			Console.Write("Enter you password: ");
+			Console.Write("Enter your password: ");
 			string pass = SHA256.calc(Console.ReadLine());
 			if (File.Exists("userdb/" + user)
 				&& File.ReadAllText("userdb/" + user) == pass) // Checks to see if the user's entry in the user database exists,
