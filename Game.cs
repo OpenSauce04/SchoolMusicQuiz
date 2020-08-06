@@ -28,16 +28,16 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				Console.CursorTop++;
 				Decor.WriteCentered("Chances: " + chances + " Score: " + score);
 				Console.CursorTop++;
-				Decor.WriteCentered(Songs[(SongId * 3) + 1]); //Display artist
-				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name
-				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[1]);
-				Console.CursorLeft = Console.WindowWidth / 2 - Songs[(SongId * 3) + 2].Length / 2;
+				Decor.WriteCentered(Songs[(SongId * 3) + 1]); //Display artist.
+				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name's letter.
+				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[1]); //Display correlating underscores.
+				Console.CursorLeft = Console.WindowWidth / 2 - Songs[(SongId * 3) + 2].Length / 2; // Adjust the cursor so that it lines up with the hidden song name
 				Console.CursorTop += 1;
-				if (Console.ReadLine().ToLower() == Songs[(SongId * 3) + 2].ToLower())
+				if (Console.ReadLine().ToLower() == Songs[(SongId * 3) + 2].ToLower()) // If the inputted song name and selected song name are the same...
 				{
 					Decor.WriteCentered("Correct!");
 					score += 1;
-					chances = 2;
+					chances = 2; // Reset number of chances for next question.
 				}
 				else
 				{

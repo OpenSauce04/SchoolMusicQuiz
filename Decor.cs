@@ -7,15 +7,15 @@ namespace SchoolCodingThingIDKwhatItsCalled
 	{
 		public static void DrawBorder()
 		{
-			Console.Write("╔" + new String('═', Console.WindowWidth - 2) + "╗");
+			Console.Write("╔" + new String('═', Console.WindowWidth - 2) + "╗"); // Top
 			for (int i = 0; i < Console.WindowHeight - 3; i++)
 			{
 				Console.Write("║");
-				Console.CursorLeft += Console.WindowWidth - 2;
+				Console.CursorLeft += Console.WindowWidth - 2;                   // Middle
 				Console.Write("║");
 				Console.CursorLeft = 0;
 			}
-			Console.Write("╚" + new String('═', Console.WindowWidth - 2) + "╝");
+			Console.Write("╚" + new String('═', Console.WindowWidth - 2) + "╝"); // Bottom
 			Console.CursorTop = 0;
 			Console.CursorLeft = 0;
 		}

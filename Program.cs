@@ -31,8 +31,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 
 			if (handle != IntPtr.Zero)
 			{
-				DeleteMenu(sysMenu, SC_MAXIMIZE, MF_BYCOMMAND);
-				DeleteMenu(sysMenu, SC_SIZE, MF_BYCOMMAND);
+				DeleteMenu(sysMenu, SC_MAXIMIZE, MF_BYCOMMAND); // Disable maximize button
+				DeleteMenu(sysMenu, SC_SIZE, MF_BYCOMMAND);     // Disable screen resize
 			}
 			// END
 			Console.WindowWidth = 50;
