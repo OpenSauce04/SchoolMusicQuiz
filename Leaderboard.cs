@@ -52,7 +52,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 		public static void Sort()
 		{
 			bool Sorted = false;
-			while (Sorted == false) {
+			while (Sorted == false)
+			{
 				Sorted = true;
 				for (int i = 0; i <= Scores.Length - 2; i++)
 				{
@@ -63,7 +64,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 							Swap(i, i + 1);
 							Sorted = false;
 						}
-					} catch (NullReferenceException) { break; }
+					}
+					catch (NullReferenceException) { break; }
 				}
 			}
 		}

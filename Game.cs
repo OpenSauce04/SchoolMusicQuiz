@@ -24,12 +24,19 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					SongId = random.Next(0, 182);
 				}
 				Console.Clear();
-				Console.WriteLine("Chances: " + chances + " Score: " + score + "\n");
-				Console.WriteLine(Songs[(SongId * 3) + 1]); //Display artist
-				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name
-				Console.WriteLine(BlankText.Parse(Songs[(SongId * 3) + 2])[1]);
+				Decor.DrawBorder();
+				Decor.IndentedNL();
+				Console.Write("Chances: " + chances + " Score: " + score);
+				Decor.IndentedNL();
+				Console.Write(Songs[(SongId * 3) + 1]); //Display artist
+				Decor.IndentedNL();
+				Console.Write(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name
+				Decor.IndentedNL();
+				Console.Write(BlankText.Parse(Songs[(SongId * 3) + 2])[1]);
+				Decor.IndentedNL();
 				if (Console.ReadLine().ToLower() == Songs[(SongId * 3) + 2].ToLower())
 				{
+					Decor.IndentedNL();
 					Console.WriteLine("Correct!");
 					score += 1;
 					chances = 2;
@@ -39,16 +46,21 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					chances -= 1;
 					if (chances == 0)
 					{
-						Console.WriteLine("Game Over!");
-						Console.WriteLine("The correct answer was " + Songs[(SongId * 3) + 2]);
-						Console.WriteLine("Final score: " + score);
+						Decor.IndentedNL();
+						Console.Write("Game Over!");
+						Decor.IndentedNL();
+						Console.Write("The correct answer was " + Songs[(SongId * 3) + 2]);
+						Decor.IndentedNL();
+						Console.Write("Final score: " + score);
 					}
 					else
 					{
-						Console.WriteLine("1 chance left...");
+						Decor.IndentedNL();
+						Console.Write("1 chance left...");
 					}
 				}
-				Console.WriteLine("Press any key to continue...");
+				Decor.IndentedNL();
+				Console.Write("Press any key to continue...");
 				Console.ReadKey();
 			}
 			Console.Clear();
