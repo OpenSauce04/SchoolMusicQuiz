@@ -28,18 +28,17 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				Console.CursorTop = 1;
 				pCursorLeft = Console.CursorLeft;
 				Console.ForegroundColor = ConsoleColor.Red;
-				Decor.WriteCentered("Chances: " + chances + new String(' ', (" Score: "+score).Length));
+				Decor.WriteCentered("Chances: " + chances + new String(' ', (" Score: "+score).Length)); // Draw flashing part of text
 				Console.ForegroundColor = ConsoleColor.White;
 				Console.CursorLeft -= ("Chances: " + chances).Length - 1;
 				Console.Write(" Score: " + score);
-				Console.CursorLeft = pCursorLeft;
-				Console.CursorTop = pCursorTop;
+				Console.CursorLeft = pCursorLeft; // Store previous Cursor position
+				Console.CursorTop = pCursorTop;   // ^
 				Thread.Sleep(500);
 				pCursorTop = Console.CursorTop;
 				Console.CursorTop = 1;
 				pCursorLeft = Console.CursorLeft;
 				Decor.WriteCentered("Chances: " + chances + " Score: " + score);
-				Console.CursorLeft = Console.WindowWidth / 2 - Songs[(SongId * 3) + 2].Length / 2;
 				Console.CursorLeft = pCursorLeft;
 				Console.CursorTop = pCursorTop;
 			}
