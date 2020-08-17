@@ -64,18 +64,24 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					
 				}
 				Console.Clear();
+				Console.ForegroundColor = ConsoleColor.Blue;
 				Decor.DrawBorder();
+				Console.ForegroundColor = ConsoleColor.White;
 				Console.CursorTop++;
 				Decor.WriteCentered("Chances: " + chances + " Score: " + score);
 				Console.CursorTop++;
+				Console.ForegroundColor = ConsoleColor.Cyan;
 				Decor.WriteCentered(Songs[(SongId * 3) + 1]); //Display artist.
+				Console.ForegroundColor = ConsoleColor.White;
 				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[0]); //Display obfuscated song name's letter.
 				Decor.WriteCentered(BlankText.Parse(Songs[(SongId * 3) + 2])[1]); //Display correlating underscores.
 				Console.CursorLeft = Console.WindowWidth / 2 - Songs[(SongId * 3) + 2].Length / 2; // Adjust the cursor so that it lines up with the hidden song name
 				Console.CursorTop += 1;
 				if (Console.ReadLine().ToLower() == Songs[(SongId * 3) + 2].ToLower()) // If the inputted song name and selected song name are the same...
 				{
+					Console.ForegroundColor = ConsoleColor.Green;
 					Decor.WriteCentered("Correct!");
+					Console.ForegroundColor = ConsoleColor.White;
 					score += 1;
 					chances = 2; // Reset number of chances for next question.
 				}
@@ -84,27 +90,46 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					chances -= 1;
 					if (chances == 0)
 					{
+						Console.ForegroundColor = ConsoleColor.Red;
 						Decor.WriteCentered("Game Over!");
+						Console.ForegroundColor = ConsoleColor.White;
 						Decor.WriteCentered("Correct answer: " + Songs[(SongId * 3) + 2]);
+						Console.ForegroundColor = ConsoleColor.Green;
 						Decor.WriteCentered("Final score: " + score);
+						Console.ForegroundColor = ConsoleColor.White;
 					}
 					else
 					{
 						Decor.WriteCentered("1 chance left...");
 					}
 				}
+				Console.ForegroundColor = ConsoleColor.Yellow;
 				Decor.WriteCentered("Press any key to continue...");
+				Console.ForegroundColor = ConsoleColor.White;
 				Console.ReadKey();
 			}
+			Thread.Sleep(500); // This is to stop the chance warning from occasionally appearing over the enter name screen
 			Console.Clear();
-			Console.Write("Please enter your name: ");
+			Console.ForegroundColor = ConsoleColor.DarkBlue;
+			Decor.DrawBorder();
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.CursorTop = Console.WindowHeight / 3;
+			Decor.WriteCentered("Please enter your name:\n");
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.CursorLeft = 13;
 			Leaderboard.Add(Console.ReadLine(), score);
 			Leaderboard.Sort();
 			Leaderboard.Write();
 			Console.Clear();
-			Console.WriteLine("TOP 5 SCORES:");
+			Console.ForegroundColor = ConsoleColor.DarkBlue;
+			Decor.DrawBorder();
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.CursorTop++;
+			Decor.WriteCentered("Top 5 Scores:\n");
+			Console.ForegroundColor = ConsoleColor.Cyan;
 			Leaderboard.Display();
-			Console.WriteLine("\nPress any key to restart");
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Decor.WriteCentered("Press any key to restart");
 			Console.ReadKey();
 		}
 	}

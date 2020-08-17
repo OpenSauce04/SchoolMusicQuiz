@@ -45,10 +45,12 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Game.Init();
 			while (LoggedIn == false) // Loop this code until logged in
 			{
-				Console.WriteLine("Written by Daniel Bradbury :)\n");
+				Decor.WriteCentered("Written by Daniel Bradbury\n");
 				if (Login.Prompt())
 				{
-					Console.WriteLine("Login successful.");
+					Console.ForegroundColor = ConsoleColor.Green;
+					Decor.WriteCentered("Login successful.");
+					Console.ForegroundColor = ConsoleColor.White;
 					LoggedIn = true; // Disable login loop, start main program.
 				}
 			}

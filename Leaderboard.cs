@@ -35,7 +35,8 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			{
 				if (Scores[i] != null) // If there is a score in this slot...
 				{
-					Console.WriteLine((i + 1) + " " + Scores[i].name + ": " + Scores[i].score);
+					Console.CursorLeft = 18;
+					Console.WriteLine((i + 1) + "| " + Scores[i].name + ": " + Scores[i].score);
 				}
 			}
 		}
