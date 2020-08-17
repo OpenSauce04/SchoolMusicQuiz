@@ -23,9 +23,9 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			int pCursorTop;
 			while (true)
 			{
+				Thread.Sleep(500);
 				if (chances == 1)
 				{
-					Thread.Sleep(500);
 					pCursorTop = Console.CursorTop;
 					Console.CursorTop = 1;
 					pCursorLeft = Console.CursorLeft;
