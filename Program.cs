@@ -41,6 +41,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			Console.BufferWidth = 50;
 			Console.OutputEncoding = System.Text.Encoding.UTF8;
 			bool LoggedIn = false;
+			Game.Init();
 			while (LoggedIn == false) // Loop this code until logged in
 			{
 				Console.WriteLine("Written by Daniel Bradbury :)\n");

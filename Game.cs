@@ -23,25 +23,33 @@ namespace SchoolCodingThingIDKwhatItsCalled
 			int pCursorTop;
 			while (true)
 			{
-				Thread.Sleep(500);
-				pCursorTop = Console.CursorTop;
-				Console.CursorTop = 1;
-				pCursorLeft = Console.CursorLeft;
-				Console.ForegroundColor = ConsoleColor.Red;
-				Decor.WriteCentered("Chances: " + chances + new String(' ', (" Score: "+score).Length)); // Draw flashing part of text
-				Console.ForegroundColor = ConsoleColor.White;
-				Console.CursorLeft -= ("Chances: " + chances).Length - 1;
-				Console.Write(" Score: " + score);
-				Console.CursorLeft = pCursorLeft; // Store previous Cursor position
-				Console.CursorTop = pCursorTop;   // ^
-				Thread.Sleep(500);
-				pCursorTop = Console.CursorTop;
-				Console.CursorTop = 1;
-				pCursorLeft = Console.CursorLeft;
-				Decor.WriteCentered("Chances: " + chances + " Score: " + score);
-				Console.CursorLeft = pCursorLeft;
-				Console.CursorTop = pCursorTop;
+				if (chances == 1)
+				{
+					Thread.Sleep(500);
+					pCursorTop = Console.CursorTop;
+					Console.CursorTop = 1;
+					pCursorLeft = Console.CursorLeft;
+					Console.ForegroundColor = ConsoleColor.Red;
+					Decor.WriteCentered("Chances: " + chances + new String(' ', (" Score: " + score).Length)); // Draw flashing part of text
+					Console.ForegroundColor = ConsoleColor.White;
+					Console.CursorLeft -= ("Chances: " + chances).Length - 1;
+					Console.Write(" Score: " + score);
+					Console.CursorLeft = pCursorLeft; // Store previous Cursor position
+					Console.CursorTop = pCursorTop;   // ^
+					Thread.Sleep(500);
+					pCursorTop = Console.CursorTop;
+					Console.CursorTop = 1;
+					pCursorLeft = Console.CursorLeft;
+					Decor.WriteCentered("Chances: " + chances + " Score: " + score);
+					Console.CursorLeft = pCursorLeft;
+					Console.CursorTop = pCursorTop;
+				}
 			}
+		}
+		public static void Init()
+		{
+			Thread ChanceWarningThread = new Thread(ChanceWarning);
+			ChanceWarningThread.Start();
 		}
 		public static void Run()
 		{
@@ -53,8 +61,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 				}
 				else
 				{
-					Thread ChanceWarningThread = new Thread(ChanceWarning);
-					ChanceWarningThread.Start();
+					
 				}
 				Console.Clear();
 				Decor.DrawBorder();
