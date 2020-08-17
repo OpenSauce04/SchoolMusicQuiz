@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace SchoolCodingThingIDKwhatItsCalled
+namespace MusicQuiz
 {
 	public class SHA256
 	{

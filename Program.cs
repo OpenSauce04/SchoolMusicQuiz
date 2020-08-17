@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace SchoolCodingThingIDKwhatItsCalled
+namespace MusicQuiz
 {
 	class Program
 	{

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{396C983A-A71D-4E5B-A273-9EA66838B92B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SchoolCodingThingIDKwhatItsCalled</RootNamespace>
-    <AssemblyName>SchoolCodingThingIDKwhatItsCalled</AssemblyName>
+    <RootNamespace>MusicQuiz</RootNamespace>
+    <AssemblyName>MusicQuiz</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

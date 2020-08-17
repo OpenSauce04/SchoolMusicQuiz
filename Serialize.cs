@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-namespace SchoolCodingThingIDKwhatItsCalled
+namespace MusicQuiz
 {
 	class Serialize
 	{

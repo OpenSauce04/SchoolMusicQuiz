@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SchoolCodingThingIDKwhatItsCalled
+namespace MusicQuiz
 {
 	class Decor
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SchoolCodingThingIDKwhatItsCalled
+namespace MusicQuiz
 {
 	[Serializable]
 	class Score

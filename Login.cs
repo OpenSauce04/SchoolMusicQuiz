@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading;
 
-namespace SchoolCodingThingIDKwhatItsCalled
+namespace MusicQuiz
 {
 	public class Login
 	{
