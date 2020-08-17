@@ -82,7 +82,13 @@ namespace SchoolCodingThingIDKwhatItsCalled
 					Console.ForegroundColor = ConsoleColor.Green;
 					Decor.WriteCentered("Correct!");
 					Console.ForegroundColor = ConsoleColor.White;
-					score += 1;
+					if (chances == 2)
+					{
+						score += 3;
+					} else
+					{
+						score += 1;
+					}
 					chances = 2; // Reset number of chances for next question.
 				}
 				else
