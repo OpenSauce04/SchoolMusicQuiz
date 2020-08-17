@@ -26,6 +26,7 @@ namespace SchoolCodingThingIDKwhatItsCalled
 
 		static void Main(string[] args)
 		{
+			Console.ForegroundColor = ConsoleColor.White; // Colour is initially a slight shade of grey
 			IntPtr handle = GetConsoleWindow();
 			IntPtr sysMenu = GetSystemMenu(handle, false);
 
